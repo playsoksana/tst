@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-
+registrationForm: FormGroup = Object();
 contactsList: any;
 
   constructor(private service: ContactsClientService) { }
@@ -21,11 +21,9 @@ contactsList: any;
     })
   }
 
-  registrationForm: FormGroup = Object();
+  
 
   onSubmit (form: any) {
-
-console.log({id: this.contactsList.length + 1, ...form.value})
 this.service.addContact({id: this.contactsList.length + 1, ...form.value})
 .subscribe(data=> {this.contactsList.push(data)})
   };

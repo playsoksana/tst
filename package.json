@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --prod",
+    "dev": "ng serve -o",
+    "deploy": "npx angular-cli-ghpages --dir=dist/tst",
     "build": "ng build --prod --base-href https://playsoksana.github.io/tst/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -22,9 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "angular-in-memory-web-api": "^0.13.0",
     "rxjs": "~7.4.0",
-    "shortid": "^2.2.16",
     "tslib": "^2.3.0",
-    "uuid": "^8.3.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
