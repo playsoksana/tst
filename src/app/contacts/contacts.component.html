@@ -1,12 +1,11 @@
 
 <ul>
-    <li *ngFor="let contact of contactsList">
-        <a [routerLink]="'contacts/'+contact.id">
+    <li  *ngFor="let contact of contactsList" >
+        <a [routerLink]="'contacts/'+contact.id" >
             <p>Name: {{contact.nameUser}}</p>
             <p>Phone {{contact.phone}}</p>
             <p>Email {{contact.email}}</p>
             <p>Address: {{contact.address}}</p>
-            <p></p>
         </a>    
      
     </li>

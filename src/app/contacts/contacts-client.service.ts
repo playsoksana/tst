@@ -25,5 +25,9 @@ return this.http.post('api/contactsState', obj)
     delete(id: any) {
       return this.http.delete(`api/contactsState/${id}`)
     }
+// Нflj nайти метод получения по id
+    // getId(id: number | string) {
+    //  return this.http.get('api/contactsState', id???)
+    // }
     
 }

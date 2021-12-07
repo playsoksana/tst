@@ -23,6 +23,8 @@ contactsList: any;
 
   
 
+  
+
   onSubmit (form: any) {
 this.service.addContact({id: this.contactsList.length + 1, ...form.value})
 .subscribe(data=> {this.contactsList.push(data)})

@@ -2,14 +2,13 @@
   "name": "tst",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --prod",
+    "ng": "ng",    
     "dev": "ng serve -o",
-    "deploy": "npx angular-cli-ghpages --dir=dist/tst",
+    "start": "ng serve --prod",
     "build": "ng build --prod --base-href https://playsoksana.github.io/tst/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/tst",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-    
+    "test": "ng test"    
   },
   "private": true,
   "dependencies": {
