@@ -9,21 +9,22 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-contactsList: any;
 
+contactsList: any;
 
   constructor(private service: ContactsClientService) { }
 
   getContacts () {
     this.service.getContacts().subscribe(data => {
-      this.contactsList = data
+      this.contactsList = data;
+ 
     })
   }
 
   registrationForm: FormGroup = Object();
 
   onSubmit (form: any) {
-    form.preventDefault();
+
 console.log({id: this.contactsList.length + 1, ...form.value})
 this.service.addContact({id: this.contactsList.length + 1, ...form.value})
 .subscribe(data=> {this.contactsList.push(data)})
