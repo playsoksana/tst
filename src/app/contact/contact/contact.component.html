@@ -1,0 +1,12 @@
+<p>contact works!</p>
+
+<form  (ngSubmit)="onSubmit(formEdit, $event)" #form>
+  
+    <input type="text" [value]='contact?.nameUser' required formControlName='nameUser'>
+    <input type="email" [value]='contact?.email' required formControlName='email'>
+
+    <input type="tel" [value]='contact?.phone' required formControlName='phone'>
+    <input type="text" [value]='contact?.address' required formControlName='address'>
+<button type="submit" >Submit</button>
+<button type="button" (click)='removeContact(contact?.id)'>Remove contact</button>
+</form>

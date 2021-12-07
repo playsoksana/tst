@@ -1,0 +1,1 @@
+export * from "./cards1/cards1.component"

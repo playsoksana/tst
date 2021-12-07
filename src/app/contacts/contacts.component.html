@@ -1,0 +1,25 @@
+
+<ul>
+    <li *ngFor="let contact of contactsList">
+        <a [routerLink]="'contacts/'+contact.id">
+            <p>Name: {{contact.nameUser}}</p>
+            <p>Phone {{contact.phone}}</p>
+            <p>Email {{contact.email}}</p>
+            <p>Address: {{contact.address}}</p>
+            <p></p>
+        </a>    
+     
+    </li>
+</ul>
+
+<form  [formGroup]="registrationForm"
+(ngSubmit)="onSubmit(registrationForm)">
+  
+    <input type="text" placeholder="Enter name" required formControlName='nameUser'>
+    <input type="email" placeholder="Enter email" required formControlName='email'>
+
+    <input type="tel" placeholder="Enter phone" required formControlName='phone'>
+    <input type="text" placeholder="Enter address" required formControlName='address'>
+<button type="submit" [disabled]='registrationForm.invalid' >Submit</button>
+</form>
+

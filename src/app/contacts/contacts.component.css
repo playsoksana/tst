@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+
+}
+
+p {
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+li {
+    margin-bottom: 50px;
+}
+
+.ng-valid  input{
+    border: 2px solid green;
+    outline: none;
+}
