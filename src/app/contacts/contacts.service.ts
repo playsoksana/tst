@@ -12,8 +12,8 @@ export class ContactsService  implements InMemoryDbService {
 }
     createDb() {
       let contactsState = [
-        { id: 1, nameUser: 'Windstorm', phone: '00000000', email: 'wwww@gmail.com', address: 'street, 5' },
-        { id: 2, nameUser: 'Windstorm2', phone: '00000000', email: 'wwww@gmail.com', address: 'street, 5' }
+        { id: '1', nameUser: 'Windstorm', phone: '00000000', email: 'wwww@gmail.com', address: 'street, 5' },
+        { id: '2', nameUser: 'Windstorm2', phone: '00000000', email: 'wwww@gmail.com', address: 'street, 5' }
       ];
       return {contactsState};
     }

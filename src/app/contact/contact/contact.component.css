@@ -1,3 +1,8 @@
+main {
+    padding: 50px 40px 50px;
+    height: calc(100vh - 100px);
+}
+
 form {
     display: flex;
     flex-direction: column;
