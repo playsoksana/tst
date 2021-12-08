@@ -1,10 +1,10 @@
-<form  (click)="onSubmitContact($event)" >
+<form  #form (ngSubmit)="onSubmitContact(form)" >
   <!-- [formGroup]='formEdit' -->
-    <!-- <input type="text" [value]='contact?.nameUser' required formControlName='nameUser'>
-    <input type="email" [value]='contact?.email' required formControlName='email'>
+     <input type="text" [value]='contact?.nameUser' minlength="4" required formControlName='nameUser'>
+    <input type="email" [value]='contact?.email' minlength="10" required formControlName='email'>
 
-    <input type="tel" [value]='contact?.phone' required formControlName='phone'>
-    <input type="text" [value]='contact?.address' required formControlName='address'> -->
-<button type="submit" >Submit</button>
-<!-- <button type="button" (click)='removeContact(contact?.id)'>Remove contact</button> -->
+    <input type="tel" [value]='contact?.phone' minlength="10" required formControlName='phone'>
+    <input type="text" [value]='contact?.address' minlength="4" required formControlName='address'>
+<button class='submit' type="submit" >Submit</button>
+<button class="remove" type="button" (click)='removeContact(contact?.id)'>Remove contact</button>
 </form>

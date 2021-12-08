@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {ContactComponent} from './index'
 
@@ -10,7 +10,7 @@ import {ContactComponent} from './index'
   imports: [
     CommonModule,
     ContactComponent,
-
+    FormsModule,
      ReactiveFormsModule 
   ]
 })
