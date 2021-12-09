@@ -1,9 +1,23 @@
-<header>
-    <nav>
-        <a>
-            <img [width]='width' [src]='img'>
- 
+<header [class.color]='flag'>
+    <nav [ngClass]="{position: flag}">
+        <a *ngIf='flag' [style.color]="'red'">
+            <img [width]='width' [src]='img'> 
         </a>
-        <a routerLink='/'> BACK </a>
+        <a [style.display]="flag? 'none': 'block'" class='back' routerLink='/'> BACK</a>
+      <div [ngStyle]="{
+          'color': flag ? 'red' : 'white',
+          'font-width': flag ? 'white' : 'red'
+      }">contacts</div>
+
     </nav>
+    <button class='toggle'  (click)='changeColor()'>Change a color</button>
 </header>
+
+
+<!-- [ngClass]="'border'" -->
+<!-- [ngClass]="'border', 'color'" -->
+<!-- [ngClass]=['border', 'color'] -->
+<!-- *ngIf='flag; else something' -->
+
+<!-- *ngIf='flag; then gggggg else something' -->
+<!-- <div #something> </div> -->

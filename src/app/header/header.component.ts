@@ -9,6 +9,11 @@ export class HeaderComponent implements OnInit {
 img = './assets/logo.png';
 width = '30'
   constructor() { }
+public flag: boolean = true;
+changeColor(): void  {
+  this.flag = !this.flag;
+}
+
 
   ngOnInit(): void {
   }

@@ -37,3 +37,13 @@ export class ContactsComponent implements OnInit {
     });
   }
 }
+
+class Piple {
+
+  constructor(x:number) {
+this.x = x
+  }
+  x: number
+}
+
+const one = new Piple (5)
