@@ -21,3 +21,86 @@
 
 <!-- *ngIf='flag; then gggggg else something' -->
 <!-- <div #something> </div> -->
+<!-- <div [innerHTML]="'Это innerHTML'"></div>
+<div *ngIf='true'>*ngIf='true'</div>
+<div [ngIf]='true'>[ngIf]='true'</div>
+<div [ngSwitch]='flag'>
+    <ng-template [ngSwitchCase]='true'>
+        <div>Первый елемент </div>
+    </ng-template>
+    <ng-template [ngSwitchCase]='false'>
+        <div>Второй елемент </div>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+        <div>ngSwitchDefault елемент </div>
+    </ng-template>
+</div> -->
+
+
+<!-- <div [ngSwitch]='flag'>
+    <ng-template *ngSwitchCase='true'>
+        <div>Первый елемент </div>
+    </ng-template>
+    <ng-template *ngSwitchCase='false'>
+        <div>Второй елемент </div>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+        <div>ngSwitchDefault елемент </div>
+    </ng-template>
+</div> -->
+<!-- Перебор массива 2 способ --> 
+<ul>
+    <!-- <li ngFor let-item [ngForOf]='list'> {{item}} </li> -->
+</ul>
+<!-- ng-container like fragment in React <></>-->
+<!-- <ng-container>
+    text
+</ng-container> -->
+<!-- ne use *nfIf='' like fragment in React <></>-->
+<!-- <без [ngIf]='true' ничего не выведется -->
+<!-- <ng-template [ngIf]='true'>
+    text
+</ng-template> -->
+
+<!-- TEMPLATE -->
+<!-- <ng-template #shablon let-name="foo">
+TEXT-TEXT and {{name}}
+</ng-template>
+<!-- ВЫЗЫВАЕМ ШАБЛОН В НУЖНОМ МЕСТЕ  ngTemplateOutlet='shablon'-->
+<!-- <div > 
+<ng-container *ngTemplateOutlet='shablon; content: {foo: "TEXT for rendring"}' ></ng-container>
+<div  *ngTemplateOutlet='shablon'></div>
+</div> -->
+
+<!-- PIPE 
+ <div>{{text | uppercase}}</div>
+<div>{{text | number}}</div>
+Целое число 
+<div>{{text | number'1.0-0'}}</div>
+Не целое 3 до точки и 3 после 
+<div>{{text | number'3.1-3'}}</div> 
+<div>{{text | slice:3:5}}</div> -->
+
+<!-- Data -->
+<!-- data = new Data -->
+<!-- <div>{{date | date:' yy MM'}}</div> -->
+
+
+
+
+
+
+<!--  ng-content =========
+// В родителе
+<div>
+    <app-child>Передаваемый текст</app-child>
+    <app-child>Передаваемый текст</app-child>
+    <app-child>Передаваемый текст</app-child>
+</div> -->
+
+<!-- в app-child -->
+<!-- <div>
+    text before Передаваемый текст
+<ng-content></ng-content>
+    text after Передаваемый текст
+</div> -->

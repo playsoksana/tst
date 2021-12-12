@@ -1,0 +1,51 @@
+    <app-children   [value]="'1'"> Компонент 1
+        <ul>
+            <li>Первый компонент</li>
+            <li #superChild>2 компонент</li>
+            <li>3 компонент</li>
+            <li>4 компонент</li>
+            <li #superChild>5 компонент</li>
+        </ul>
+    </app-children>
+    <app-children #secondViewChild [value]="'2'">
+    
+        Компонент 2
+        <ul>
+            <li>Первый компонент</li>
+            <li>2 компонент</li>
+            <li>3 компонент</li>
+            <li #superChild>4 компонент</li>
+            <li>5 компонент</li>
+        </ul>
+    </app-children>
+    <app-children    #secondViewChild   [value]="'3'">
+  
+        Компонент 3
+        <ul>
+            <li>Первый компонент</li>
+            <li>2 компонент</li>
+            <li>3 компонент</li>
+            <li>4 компонент</li>
+            <li>5 компонент</li>
+        </ul>
+    </app-children>
+
+<button (click)='methodistsChildren()'>button</button>
+<button (click)="changeFlag()">
+    <div [ngSwitch]="flag">
+    <div *ngSwitchCase='false'>Добавить елемент</div>
+    <div *ngSwitchCase='true'>Удалить елемент</div>
+    <div *ngSwitchDefault >Добавить елемент </div>
+    </div>
+</button>
+
+<p>Всего in global: {{count}}</p>
+<button (click)='plus()'>+</button>
+<button (click)='minus()'>-</button>
+
+<app-livecycle val='555' *ngIf="flag"></app-livecycle>
+
+<ul>
+    <li *ngFor="let item of elements">===={{item}}=====</li>
+
+</ul>

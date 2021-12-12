@@ -1,0 +1,12 @@
+<ng-container *ngTemplateOutlet="mark; context: {b:'11111111111111', a: 'fffff'}" ></ng-container> 
+<ng-container *ngTemplateOutlet="mark; context: {b:'44444444444444444'}" ></ng-container>
+<ng-container *ngTemplateOutlet="mark; context: {b:'333333333333333333'}" ></ng-container>
+
+
+
+<ng-template #mark let-person='b'>
+    <div *ngIf='person'>
+        ===== {{person}} ====
+    </div>
+
+</ng-template>

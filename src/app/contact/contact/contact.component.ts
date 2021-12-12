@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsClientService } from 'src/app/contacts/contacts-client.service';
-
+import { ServiseService } from 'src/app/servise.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
+  providers: [ServiseService]
 })
 export class ContactComponent implements OnInit {
    
   constructor(
     private router: Router,
     private activatedRouter: ActivatedRoute,
-    private service: ContactsClientService
+    private service: ContactsClientService,
+    private serv: ServiseService
   ) {
     this.id = this.activatedRouter.snapshot.paramMap.get('id');
   }
@@ -41,6 +43,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.count = this.serv.getCount();
     this.getContact(this.id);
 
   }
@@ -50,6 +53,27 @@ export class ContactComponent implements OnInit {
       this.contact = data;
     });
   }
+
+
+  count: number = 0; 
+
+    plus() {
+    this.serv.incriment();
+this.count = this.serv.getCount();
+
+
+         }
+    
+     minus() {
+    this.serv.dicriment();
+    this.count = this.serv.getCount();
+    
+         }
+
+         log(v: any) {
+           console.log(v)
+         }
+
 }
 
 

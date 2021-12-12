@@ -22,5 +22,5 @@
     <input type="text" placeholder="Enter address" minlength="4" required formControlName='address'>
 <button class="submit" type="submit" [disabled]='registrationForm.invalid'>Submit</button>
 </form>
-
+<app-card (changeColorParent)=funColor($event) [value]="'Новый text'" (metodfromParent)='returnText($event)'></app-card>
 </main>

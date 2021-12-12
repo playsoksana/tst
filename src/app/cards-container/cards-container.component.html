@@ -1,0 +1,17 @@
+<button (click)="discountPrice()" >Хочу Дешевле</button>
+<div class=”product”>
+    <ul>
+        <li *ngFor="let item of discountProduct">
+            <p>{{item.name}}</p>
+            <p>{{item.price}}</p>
+            <p *ngIf='showDescription'>{{item.description}}</p>
+        </li>
+    </ul>
+</div>
+<app-cards-block (openDescription)="changeShowDescription()"
+[showDescription]='showDescription' *ngFor="let product of products"
+ rose='ROSE'>
+<b #b> {{ product.color }} </b>
+</app-cards-block>
+
+

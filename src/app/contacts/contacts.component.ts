@@ -27,6 +27,14 @@ export class ContactsComponent implements OnInit {
       });
   }
 
+  returnText(v: any) {
+    console.log(v)
+  }
+
+  funColor(e:string) {
+console.log(e)
+  }
+
   ngOnInit(): void {
     this.getContacts();
     this.registrationForm = new FormGroup({
